@@ -41,7 +41,7 @@ Game.prototype.keyboarderMoveShip = function () {
 
 Game.prototype.render = function () {
   renderObject.CreateImg(IMAGES.background, gameFieldBg);
-  if (this.spaceShip.state) {
+  if (this.spaceShip.isMove) {
     renderObject.CreateImg(IMAGES.dragonFire, { x: this.spaceShip.x - 24, y: this.spaceShip.y + 11, width: 40, height: 20 });
   }
   renderObject.CreateImg(IMAGES.spaceShip, this.spaceShip);
