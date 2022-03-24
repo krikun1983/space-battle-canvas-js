@@ -7,21 +7,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="src/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="src/css/style.css">
-  <title>Task 5. JS Game</title>
+  <title>Браузерная игра: космическая битва</title>
 </head>
 
 <body>
-  <div class="game">
-    <button class="btn-main-start" type="button">Start</button>
-    <div class="info">
-      <button class="btn-info" type="button">Info</button>
+  <section class="game">
+    <button class="btn btn-start" type="button">Start</button>
+    <div class="game__info">
+      <button class="btn btn-info" type="button">Info</button>
     </div>
     <canvas width="1000" height="600"></canvas>
     <div class="btns-services-wrapper">
       <div class="btns-services hidden">
-        <button class="btn-service-next hidden" type="button">Next</button>
-        <button class="btn-service-pause" type="button">Pause</button>
-        <button class="btn-service-game" type="button">New Game</button>
+        <button class="btn btn-service-next hidden" type="button">Next</button>
+        <button class="btn btn-service-pause" type="button">Pause</button>
+        <button class="btn btn-service-game" type="button">New Game</button>
       </div>
     </div>
     <div class="modal-registration-window hidden">
@@ -36,8 +36,8 @@
             <option value="4">Hard</option>
           </select>
           <div class="form-btns">
-            <button class="form-btn-start" type="button">Start</button>
-            <button class="form-btn-cancel" type="button">Cancel</button>
+            <button class="btn form-btn-start" type="button">Start</button>
+            <button class="btn form-btn-cancel" type="button">Cancel</button>
           </div>
         </form>
       </div>
@@ -45,7 +45,8 @@
     <div class="modal-info hidden">
       <img src="./src/img/control.jpg" alt="info">
     </div>
-    <script src="index.js" type="module"></script>
+  </section>
+  <script src="index.js" type="module"></script>
 </body>
 
 </html>

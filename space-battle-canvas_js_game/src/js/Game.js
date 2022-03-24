@@ -29,9 +29,24 @@ Game.prototype.keyboarderMoveShip = function () {
   const isResult = (el) => el;
 
   document.addEventListener('keydown', (event) => {
+    const btnGameNext = document.querySelector('.btn-service-next');
+    const btnGamePause = document.querySelector('.btn-service-pause');
     if (activeKeys.some(isResult)) { this.activeKeys.add(event.key) };
-    if (this.activeKeys.has('Enter')) { gamePause() };
-    if (this.activeKeys.has(' ')) { this.spaceShip.fire() };
+    if (this.activeKeys.has('Enter')) {
+      event.preventDefault();
+      if (this.isPause) {
+        btnGameNext.classList.add('hidden');
+        btnGamePause.classList.remove('hidden');
+      } else {
+        btnGameNext.classList.remove('hidden');
+        btnGamePause.classList.add('hidden');
+      }
+      gamePause();
+    };
+    if (this.activeKeys.has(' ')) {
+      event.preventDefault();
+      this.spaceShip.fire();
+    };
   })
 
   document.addEventListener('keyup', (event) => {

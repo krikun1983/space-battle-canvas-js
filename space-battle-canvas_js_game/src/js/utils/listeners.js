@@ -6,7 +6,7 @@ export const settings = {
   name: '',
   difficult: '',
 };
-const btnMainStart = document.querySelector('.btn-main-start');
+const btnStart = document.querySelector('.btn-start');
 const modalRegistration = document.querySelector('.modal-registration-window');
 const modalInfo = document.querySelector('.modal-info');
 const btnsServices = document.querySelector('.btns-services');
@@ -15,8 +15,8 @@ const btnGamePause = document.querySelector('.btn-service-pause');
 
 export const listeners = (event, gameLoop) => {
   const btnsEvent = event.target;
-  if (btnsEvent.classList.contains('btn-main-start')) {
-    btnMainStart.classList.add('hidden');
+  if (btnsEvent.classList.contains('btn-start')) {
+    btnStart.classList.add('hidden');
     modalRegistration.classList.remove('hidden');
   } else if (btnsEvent.classList.contains('form-btn-start')) {
     event.preventDefault();
@@ -29,7 +29,7 @@ export const listeners = (event, gameLoop) => {
     gameLoop();
     renderAudios.createAudio(AUDIOS.begin);
   } else if (btnsEvent.classList.contains('form-btn-cancel') || btnsEvent.classList.contains('modal-registration-window')) {
-    btnMainStart.classList.remove('hidden');
+    btnStart.classList.remove('hidden');
     modalRegistration.classList.add('hidden');
   } else if (btnsEvent.classList.contains('btn-service-next')) {
     btnGameNext.classList.add('hidden');
